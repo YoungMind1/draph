@@ -8,7 +8,6 @@ import {
   getCachedModule,
   queryModuleCache,
 } from '../../lib/ModuleCache.js';
-import { report } from '../../lib/bugsnag.js';
 import {
   PARAM_COLORIZE,
   PARAM_DEPENDENCIES,
@@ -265,7 +264,7 @@ export default function GraphDiagram({ activity }: { activity: LoadActivity }) {
         if (m.name) {
           el.dataset.module = m.key;
         } else {
-          report.warn(Error(`Bad replace: ${key}`));
+          console.warn(`Bad replace: ${key}`);
         }
 
         if (!moduleFilter(m)) {

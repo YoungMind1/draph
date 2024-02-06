@@ -2,7 +2,6 @@ import { Maintainer } from '@npm/types';
 import md5 from 'md5';
 import simplur from 'simplur';
 import Module from '../../../lib/Module.js';
-import { report } from '../../../lib/bugsnag.js';
 import { GraphModuleInfo } from '../../GraphDiagram/graph_util.js';
 import { Selectable } from '../../Selectable.js';
 import styles from './AllMaintainersAnalyzer.module.scss';
@@ -43,7 +42,7 @@ export class AllMaintainersAnalyzer extends Analyzer {
       }
 
       if (!maintainer.name) {
-        report.error(new Error(`Nameless maintainer "${m}" in ${module.key}`));
+        console.error(`Nameless maintainer "${m}" in ${module.key}`);
         maintainer.name = '\u{26A0}\u{FE0F} (unnamed maintainer)';
       }
 

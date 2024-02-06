@@ -16,7 +16,6 @@
     "https://github.com/sponsors/fregante"
   ],
   "dependencies": {
-    "@bugsnag/js": "7.21.0",
     "@hpcc-js/wasm": "2.13.1",
     "@types/d3-interpolate": "3.0.1",
     "@types/d3-scale": "4.0.4",

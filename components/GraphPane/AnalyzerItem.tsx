@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { report } from '../../lib/bugsnag.js';
 import { cn } from '../../lib/dom.js';
 import { GraphState } from '../GraphDiagram/graph_util.js';
 import styles from './AnalyzerItem.module.scss';
@@ -30,7 +29,7 @@ export function AnalyzerItem({
 
     results = analyzer.reduce();
   } catch (err) {
-    report.error(err as Error);
+    console.error(err);
     return;
   }
 

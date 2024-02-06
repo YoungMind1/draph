@@ -1,4 +1,3 @@
-import './bugsnag.js'; // Initialize ASAP!
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
@@ -11,7 +10,6 @@ import { flash } from './flash.js';
 import { fetchCommits } from './useCommits.js';
 import { Unsupported } from '../components/Unsupported.js';
 
-// Various features we depend on that have triggered bugsnag errors in the past
 function detectFeatures() {
   const unsupported: JSX.Element[] = [];
 
