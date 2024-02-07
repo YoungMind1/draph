@@ -3,8 +3,8 @@ import $ from '../../lib/dom.js';
 import { DownloadIcon } from '../Icons.js';
 import { getDiagramElement } from './GraphDiagram.js';
 
-import indexStyles from 'bundle-text:../../index.scss';
-import diagramStyles from 'bundle-text:./GraphDiagram.scss';
+import indexStyles from '../../index.scss';
+import diagramStyles from './GraphDiagram.scss';
 
 type DownloadExtension = 'svg' | 'png';
 
